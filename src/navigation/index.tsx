@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import React, {useContext} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {DetailScreen, HomeScreen, LoginScreen} from '../screens';
+import {DetailScreen, HomeScreen, LoginScreen, MapScreen} from '../screens';
 import {routes} from '../constants/routesNames';
 import UserContext from '../store/UserInfoContext';
 import {Button} from 'react-native-paper';
@@ -21,11 +21,11 @@ export default function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {userNameToken ? (
+        {'ytyut' ? (
           <>
             <Stack.Screen
-              name={routes.HOME.INITIAL}
-              component={HomeScreen}
+              name={routes.HOME.MAP}
+              component={MapScreen}
               options={{
                 headerRight: () => <Button onPress={signOut}>SIGNOUT</Button>,
               }}
